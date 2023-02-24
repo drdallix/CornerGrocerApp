@@ -1,0 +1,44 @@
+Class Item:
+    - create a private variable named "ItemMap" to store the frequency of items as a dictionary
+    
+    - create a constructor method that takes in a file name as a parameter
+      - open the file with the given name
+      - read the contents of the file line by line
+      - for each line, split it into individual items
+      - for each item, increase its count in the ItemMap dictionary
+      - close the file
+    
+    - create a public method named "SearchItem" that takes in an item as a parameter
+      - check if the item is in the ItemMap dictionary
+      - if the item is in the dictionary, return its frequency
+      - otherwise, return "Item not found"
+      
+    - create a public method named "PrintFrequencyList"
+      - iterate through the ItemMap dictionary and print each item and its frequency
+      
+    - create a public method named "PrintHistogram"
+      - iterate through the ItemMap dictionary
+      - for each item, print the item followed by a number of asterisks equal to its frequency
+      
+    - create a public method named "WriteBackup" that takes in a file name as a parameter
+      - open a file with the given name
+      - write the frequency of all items in the ItemMap dictionary to the file
+      - close the file
+      
+
+Class Menu: 
+    - create a loop to display a menu to the user with the following options:
+        1. Search for a specific item
+        2. Print a list with the frequency of all items
+        3. Print a histogram of the frequency of all items
+        4. Exit program
+      - prompt the user to select an option
+      - based on the user's selection, call the appropriate method from the Item class
+	- use a try catch loop to catch cin input exception if user inputs something invalid
+      - repeat the loop until the user selects the "Exit program" option
+
+Main Class:
+    - create an instance of the Item class with the input file name "CS210_Project_Three_Input_File.txt"
+    - call the "WriteBackup" method with the file name "frequency.dat"
+    - call Menu(Item) to start menu loop
+
